@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^go/dashboard$ go/index.php [NC,L]
+RewriteRule ^go/make$ go/make.php [NC,L]
+RewriteRule ^go/brand$ go/brand.php [NC,L]
+RewriteRule ^go/cc$ go/cc.php [NC,L]
+RewriteRule ^go/product$ go/product.php [NC,L]
+RewriteRule ^go/photo$ go/photo.php [NC,L]

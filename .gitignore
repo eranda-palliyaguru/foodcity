@@ -1,0 +1,8 @@
+# IntelliJ
+.idea/
+
+# Composer
+vendor/
+composer.phar
+connect.php
+auth/connect.php
