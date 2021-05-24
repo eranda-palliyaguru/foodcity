@@ -6,6 +6,7 @@ $size=$_POST['size'];
 $sell=$_POST['sell'];
 $cost=$_POST['cost'];
 $id=$_POST['brand'];
+$about=$_POST['about'];
 $date=date('Y-m-d');
 
 
@@ -14,7 +15,7 @@ $stmt = $db->query("SELECT * FROM brand WHERE id='$id'");
 while ($row = $stmt->fetch())
 { $brand_name=$row['name']; }
 
-$sql = "INSERT INTO product (name, size, brand_id, brand, sell_price, cost_price, up_date) VALUES ('$name', '$size', '$id','$brand_name', '$sell', '$cost', '$date')";
+$sql = "INSERT INTO product (name, size, brand_id, brand, sell_price, cost_price, up_date, about) VALUES ('$name', '$size', '$id','$brand_name', '$sell', '$cost', '$date', '$about')";
 if ($db->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {

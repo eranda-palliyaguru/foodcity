@@ -128,13 +128,13 @@ while ($row = $stmt->fetch())
                            <!-- text input -->
                            <div class="form-group">
                              <label>Product Name</label>
-                             <input type="text" name="name" class="form-control" placeholder="Enter ...">
+                             <input type="text" name="name" class="form-control" placeholder="Enter ..." autocomplete="off">
                            </div>
                          </div>
                          <div class="col-sm-6">
                            <div class="form-group">
                              <label>Product Size</label>(ex: 10g or 3Kg)
-                             <input type="text" name="size" class="form-control" placeholder="Enter ...">
+                             <input type="text" name="size" class="form-control" placeholder="Enter ..." autocomplete="off">
                            </div>
                          </div>
                        </div>
@@ -144,13 +144,13 @@ while ($row = $stmt->fetch())
                                    <!-- text input -->
                                    <div class="form-group">
                                      <label>Selling Proce</label>
-                                     <input type="number" name="sell" class="form-control" >
+                                     <input type="number" name="sell" class="form-control" autocomplete="off" >
                                    </div>
                                  </div>
                                  <div class="col-sm-3">
                                    <div class="form-group">
                                      <label>Cost Price</label>
-                                     <input type="number" name="cost" class="form-control" >
+                                     <input type="number" name="cost" class="form-control" autocomplete="off" >
                                    </div>
                                  </div>
 
@@ -168,6 +168,16 @@ while ($row = $stmt->fetch())
                                    </div>
                                  </div>
                                </div>
+
+                               <div class="row">
+                                         <div class="col-sm-12">
+                                           <!-- text input -->
+                                           <div class="form-group">
+                                             <label>About This Product</label>
+                                            <textarea class="form-control" rows="3" name="about" placeholder="Enter ..."></textarea>
+                                           </div>
+                                         </div>
+                                       </div>
 
             <div class="row">
            <div class="col-sm-4">
