@@ -143,7 +143,7 @@ while ($row = $stmt->fetch())
                                  <div class="col-sm-3">
                                    <!-- text input -->
                                    <div class="form-group">
-                                     <label>Selling Proce</label>
+                                     <label>Selling Price</label>
   <input name="sell"  type="number" class="form-control" placeholder="0.00" autocomplete="off" required min="0" step="0.01" title="Currency" pattern="^\d+(?:\.\d{1,2})?$" onblur="this.parentNode.parentNode.style.backgroundColor=/^\d+(?:\.\d{1,2})?$/.test(this.value)?'inherit':'red'">
                                    </div>
                                  </div>
@@ -188,13 +188,13 @@ while ($row = $stmt->fetch())
 
 <div class="col-sm-4">
   <div class="form-group">
-    <label>other Photo</label>
+    <label>Other Photo</label>
 <input type="file" class="btn btn-info col fileinput-button" name="image2" id="">
 </div></div>
 
 <div class="col-sm-4">
   <div class="form-group">
-    <label>other Photo</label>
+    <label>Other Photo</label>
 <input type="file" class="btn btn-info col fileinput-button" name="image3" id="">
 </div></div> </div>
 
