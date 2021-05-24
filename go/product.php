@@ -128,7 +128,7 @@ while ($row = $stmt->fetch())
                            <!-- text input -->
                            <div class="form-group">
                              <label>Product Name</label>
-                             <input type="text" name="name" class="form-control" placeholder="Enter ..." autocomplete="off">
+                             <input type="text" name="name" class="form-control" placeholder="Enter ..." autocomplete="off" onblur="this.parentNode.parentNode.style.backgroundColor=/^\d+(?:\.\d{1,2})?$/.test(this.value)?'inherit':'red'">
                            </div>
                          </div>
                          <div class="col-sm-6">
@@ -144,13 +144,13 @@ while ($row = $stmt->fetch())
                                    <!-- text input -->
                                    <div class="form-group">
                                      <label>Selling Proce</label>
-                                     <input type="number" name="sell" class="form-control" autocomplete="off" >
+  <input name="sell"  type="number" class="form-control" placeholder="0.00" autocomplete="off" required min="0" step="0.01" title="Currency" pattern="^\d+(?:\.\d{1,2})?$" onblur="this.parentNode.parentNode.style.backgroundColor=/^\d+(?:\.\d{1,2})?$/.test(this.value)?'inherit':'red'">
                                    </div>
                                  </div>
                                  <div class="col-sm-3">
                                    <div class="form-group">
                                      <label>Cost Price</label>
-                                     <input type="number" name="cost" class="form-control" autocomplete="off" >
+ <input name="cost"  type="number" class="form-control" placeholder="0.00" autocomplete="off" required min="0" step="0.01" title="Currency" pattern="^\d+(?:\.\d{1,2})?$" onblur="this.parentNode.parentNode.style.backgroundColor=/^\d+(?:\.\d{1,2})?$/.test(this.value)?'inherit':'red'">
                                    </div>
                                  </div>
 
