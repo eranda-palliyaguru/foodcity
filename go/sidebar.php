@@ -15,10 +15,19 @@
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo $auth->getUsername(); ?></a>
-<form action="../index.php" method="post" accept-charset="utf-8">
-          <input type="hidden" name="action" value="logOut" />
-          <button type="submit" class="btn btn-block btn-outline-primary">Log out</button>
-        </form>
+          <?php
+
+
+            	echo '<form action="../index.php" method="post" accept-charset="utf-8">';
+            	echo '<input type="hidden" name="action" value="logOut" />';
+            	echo '<button type="submit" class="btn btn-block btn-outline-primary">Log out</button>';
+            	echo '</form>';
+            
+
+             ?>
+
+
+
         </div>
       </div>
 
