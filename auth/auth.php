@@ -26,11 +26,40 @@ $auth = new \Delight\Auth\Auth($db);
 //\showDebugData($auth, $result);
 $id = $auth->getUserId();
 
-if ($auth->isLoggedIn()) {
+if ($auth->check()) {
 
 }
 else {
 header("location:../index.php");
 }
 
+function convertStatusToText(\Delight\Auth\Auth $auth) {
+	if ($auth->isLoggedIn() === true) {
+		if ($auth->getStatus() === \Delight\Auth\Status::NORMAL && $auth->isNormal()) {
+			return 'normal';
+		}
+		elseif ($auth->getStatus() === \Delight\Auth\Status::ARCHIVED && $auth->isArchived()) {
+			return 'archived';
+		}
+		elseif ($auth->getStatus() === \Delight\Auth\Status::BANNED && $auth->isBanned()) {
+			return 'banned';
+		}
+		elseif ($auth->getStatus() === \Delight\Auth\Status::LOCKED && $auth->isLocked()) {
+			return 'locked';
+		}
+		elseif ($auth->getStatus() === \Delight\Auth\Status::PENDING_REVIEW && $auth->isPendingReview()) {
+			return 'pending review';
+		}
+		elseif ($auth->getStatus() === \Delight\Auth\Status::SUSPENDED && $auth->isSuspended()) {
+			return 'suspended';
+		}
+	}
+	elseif ($auth->isLoggedIn() === false) {
+		if ($auth->getStatus() === null) {
+			return 'none';
+		}
+	}
+
+	throw new Exception('Invalid status `' . $auth->getStatus() . '`');
+}
  ?>
