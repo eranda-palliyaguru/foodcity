@@ -9,7 +9,8 @@ $id=$_POST['brand'];
 $about=$_POST['about'];
 $date=date('Y-m-d');
 
-
+$about= (float) strtr($about, ['-' => '',]);
+$about= (float) strtr($about, [',' => '',]);
 
 $stmt = $db->query("SELECT * FROM brand WHERE id='$id'");
 while ($row = $stmt->fetch())
